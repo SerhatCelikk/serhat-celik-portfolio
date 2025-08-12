@@ -1,30 +1,32 @@
 {
+  "name": "serhat-celik",
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
-  "version": "0.2.11",
-  "author": "LekoArts <hello@lekoarts.de>",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-portfolio-cara",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://SerhatCelikk.github.io/serhat-celik",
   "dependencies": {
-    "@lekoarts/gatsby-theme-cara": "^3.0.0",
-    "gatsby": "^4.4.0",
-    "gatsby-plugin-gatsby-cloud": "^4.0.0",
-    "gatsby-plugin-manifest": "^4.0.0",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.22",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "gh-pages": "^6.3.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.2"
   }
 }
