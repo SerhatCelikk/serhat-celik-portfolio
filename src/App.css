@@ -868,6 +868,21 @@ h1 {
     background: rgba(17, 24, 39, 0.95);
   }
   
+  .nav {
+    background: rgba(17, 24, 39, 0.95);
+  }
+  
+  .menu-toggle span {
+    background: var(--text-primary);
+  }
+  
+  /* Dark mode for mobile navigation */
+  @media (max-width: 768px) {
+    .nav {
+      background: rgba(17, 24, 39, 0.95);
+    }
+  }
+  
   .form-group input,
   .form-group textarea {
     background: var(--bg-secondary);
