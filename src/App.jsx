@@ -309,24 +309,24 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // mailto formatında email oluştur
+
+    // Create email in mailto format
     const emailTo = 'serhatcelikyazilim@gmail.com';
-    const subject = encodeURIComponent(formData.subject || 'İletişim Formu - Portfolio');
+    const subject = encodeURIComponent(formData.subject || 'Contact Form - Portfolio');
     const body = encodeURIComponent(
-      `Merhaba Serhat,\n\n` +
-      `Ad Soyad: ${formData.name}\n` +
+      `Hello Serhat,\n\n` +
+      `Name: ${formData.name}\n` +
       // `Email: ${formData.email}\n\n` +
-      `Mesaj:\n${formData.message}\n\n` +
-      `Bu mesaj portfolio sitenizden gönderilmiştir.`
+      `Message:\n${formData.message}\n\n` +
+      `This message was sent from your portfolio website.`
     );
-    
+
     const mailtoUrl = `mailto:serhatcelikyazilim@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Mail uygulamasını aç
+
+    // Open mail application
     window.location.href = mailtoUrl;
-    
-    // Form verilerini temizle (isteğe bağlı)
+
+    // Clear form data
     setFormData({
       name: '',
       message: '',
@@ -345,21 +345,21 @@ function Contact() {
     <main className="contact">
       <div className="container">
         <section className="contact-intro">
-          <h1>İletişime Geçin</h1>
+          <h1>Get In Touch</h1>
           <p className="lead">
-            Bir sonraki projenizi veya iş birliği fırsatınızı konuşalım
+            Let's discuss your next project or collaboration opportunity
           </p>
         </section>
 
         <div className="contact-content">
           <div className="contact-info">
-            <h3>Bağlantı Kuralım</h3>
+            <h3>Let's Connect</h3>
             <p>
-              Yeni fırsatları ve heyecan verici projeleri duymakla her zaman ilgileniyorum. 
-              İster bir frontend geliştirici arıyor olun, ister harika bir şey üzerinde işbirliği yapmak isteyin, 
-              sizden haber almayı çok isterim.
+              I'm always interested in hearing about new opportunities and exciting projects.
+              Whether you're looking for a frontend developer or want to collaborate on something amazing,
+              I'd love to hear from you.
             </p>
-            
+
             <div className="contact-methods">
               <div className="contact-method">
                 <h4>📧 Email</h4>
@@ -378,7 +378,7 @@ function Contact() {
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Ad Soyad</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -386,12 +386,12 @@ function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Adınız ve soyadınız"
+                placeholder="Your full name"
               />
             </div>
-            
+
             {/* <div className="form-group">
-              <label htmlFor="email">Email Adresiniz</label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="email"
                 id="email"
@@ -399,12 +399,12 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="ornek@email.com"
+                placeholder="example@email.com"
               />
             </div> */}
-            
+
             <div className="form-group">
-              <label htmlFor="subject">Konu</label>
+              <label htmlFor="subject">Subject</label>
               <input
                 type="text"
                 id="subject"
@@ -412,12 +412,12 @@ function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                placeholder="Mesajınızın konusu"
+                placeholder="Subject of your message"
               />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="message">Mesajınız</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -425,12 +425,12 @@ function Contact() {
                 onChange={handleChange}
                 rows="5"
                 required
-                placeholder="Mesajınızı buraya yazın..."
+                placeholder="Write your message here..."
               ></textarea>
             </div>
-            
+
             <button type="submit" className="btn btn-primary">
-              📧 Mail Gönder
+              Send Email
             </button>
           </form>
         </div>
