@@ -231,13 +231,6 @@ function Projects() {
       type: "Mobile App"
     },
     {
-      title: "Gençlik Otobüsü",
-      description: "Android app and website for youth transportation services.",
-      link: "https://play.google.com/store/apps/details?id=com.serhatcelik.genclikotobusu",
-      tech: ["Android", "Web Development"],
-      type: "Mobile & Web"
-    },
-    {
       title: "BeesForce Marketing Site",
       description: "Modern marketing website with responsive design and smooth animations.",
       link: "https://fe-beesforce.vercel.app/",
